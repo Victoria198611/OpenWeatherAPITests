@@ -16,10 +16,23 @@ The goal is to validate positive and negative scenarios for the OpenWeather serv
 
 ##  Project Structure
 src
+├── main
+│   └── java
+│       └── com.jsonplaceholder
+│           └── App.java
 └── test
-└── java
-└── api
-└── WeatherTests.java
+├── java
+│   └── api.openweather.tests
+│       ├── BaseTest.java
+│       ├── ConfigReader.java
+│       ├── WeatherService.java
+│       ├── WeatherPositiveTests.java
+│       └── WeatherNegativeTests.java
+└── resources
+├── allure.properties
+├── categories.json
+├── config.properties
+└── environment.properties
 
 
 
