@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+        <!-- Root suite definition -->
+<suite name="OpenWeather API Tests">
+
+<!-- Suite for positive test scenarios -->
+<test name="Weather Positive Tests">
+    <classes>
+        <!-- Runs all tests from the WeatherPositiveTests class -->
+        <class name="api.openweather.tests.WeatherPositiveTests"/>
+    </classes>
+</test>
+
+<!-- Suite for negative test scenarios -->
+<test name="Weather Negative Tests">
+    <classes>
+        <!-- Runs all tests from the WeatherNegativeTests class -->
+        <class name="api.openweather.tests.WeatherNegativeTests"/>
+    </classes>
+</test>
+
+</suite>
