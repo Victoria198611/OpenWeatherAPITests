@@ -15,54 +15,52 @@
 
     <dependencies>
 
-        <!-- RestAssured -->
+        <!-- [RestAssured](ca://s?q=RestAssured_dependency_in_Maven) -->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
             <version>5.4.0</version>
         </dependency>
 
-        <!-- TestNG -->
+        <!-- [TestNG](ca://s?q=TestNG_dependency_in_Maven) -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>7.10.2</version>
         </dependency>
 
-        <!-- Jackson -->
+        <!-- [Jackson](ca://s?q=Jackson_dependency_in_Maven) -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.17.0</version>
         </dependency>
-
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
             <version>2.17.0</version>
         </dependency>
-
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
             <version>2.17.0</version>
         </dependency>
 
-        <!-- Logging -->
+        <!-- [SLF4J](ca://s?q=SLF4J_logging_dependency) -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>1.7.36</version>
         </dependency>
 
-        <!-- Allure TestNG -->
+        <!-- [Allure TestNG](ca://s?q=Allure_TestNG_dependency) -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
             <version>2.29.0</version>
         </dependency>
 
-        <!-- Allure RestAssured -->
+        <!-- [Allure RestAssured](ca://s?q=Allure_RestAssured_dependency) -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-rest-assured</artifactId>
@@ -73,7 +71,7 @@
 
     <build>
 
-        <!-- CORRECT COPYING OF TEST RESOURCES -->
+        <!-- Copiere resurse de test -->
         <testResources>
             <testResource>
                 <directory>src/test/resources</directory>
@@ -85,7 +83,7 @@
 
         <plugins>
 
-            <!-- Surefire (TestNG runner) -->
+            <!-- [Surefire plugin](ca://s?q=Maven_Surefire_plugin) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -94,14 +92,13 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>${project.basedir}/testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
-
                     <systemPropertyVariables>
                         <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
 
-            <!-- Allure Maven Plugin -->
+            <!-- [Allure Maven plugin](ca://s?q=Allure_Maven_plugin) -->
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
@@ -115,7 +112,7 @@
                 <executions>
                     <execution>
                         <id>copy-environment</id>
-                        <phase>test</phase>
+                        <phase>prepare-package</phase>
                         <goals>
                             <goal>copy-resources</goal>
                         </goals>
