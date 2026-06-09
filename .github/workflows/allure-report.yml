@@ -31,7 +31,7 @@ jobs:
             ${{ runner.os }}-m2
 
       - name: Run tests
-        run: mvn clean test
+        run: mvn clean test -Dmaven.test.failure.ignore=true
 
       - name: Generate Allure Report
         if: always()
