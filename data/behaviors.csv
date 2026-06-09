@@ -1,0 +1,5 @@
+"BROKEN","EPIC","FAILED","FEATURE","PASSED","SKIPPED","STORY","UNKNOWN"
+"0","Weather API","0","Positive Scenarios","8","0","","0"
+"0","Weather API","0","Negative Scenarios","6","0","","0"
+"0","Weather API","1","Positive Scenarios","0","0","Get current weather by valid city","0"
+"0","Weather API","0","Negative Scenarios","1","0","Get weather with invalid city","0"
